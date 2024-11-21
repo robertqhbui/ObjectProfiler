@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include <boost/type_index.hpp>
 #include "TimePrinter.h"
 

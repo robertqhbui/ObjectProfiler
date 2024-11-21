@@ -12,9 +12,14 @@ int main()
 
 	ObjectInfo<TestClass> objectInfoTestClassObject(TestClass("Test Class Object"));
 
-	ObjectInfo<TestClass *> objectInfoTestClassPointer(new TestClass("Test Class Pointer"));
 
-	ObjectInfo<TestClass *> objectInfoTestClassPointerNoName(new TestClass());
+	TestClass* myNamedTestClass = new TestClass("Test Class Pointer");
+	ObjectInfo<TestClass *> objectInfoTestClassPointer(myNamedTestClass);
+
+	TestClass* myNoNameTestClass = new TestClass();
+
+	ObjectInfo<TestClass *> objectInfoTestClassPointerNoName(myNoNameTestClass);
+	
 
 	objectInfoInt.show();
 	objectInfoStr1.show();
@@ -22,4 +27,8 @@ int main()
 	objectInfoTestClassObject.show();
 	objectInfoTestClassPointer.show();
 	objectInfoTestClassPointerNoName.show();
+
+	delete myNamedTestClass;
+	delete myNoNameTestClass;
+
 }

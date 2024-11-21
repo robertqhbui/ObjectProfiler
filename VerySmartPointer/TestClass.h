@@ -9,7 +9,10 @@ private:
 public:
 	TestClass() : mName("<Name not provided>") {};
 	TestClass(std::string name) : mName(name) {};
-	~TestClass() {};
+	~TestClass()
+	{
+		std::cout << "TestClass class with name [" + mName + "] destroyed" << std::endl;
+	};
 	friend std::ostream& operator<<(std::ostream& outStream, const TestClass& object)
 	{
 			outStream << object.mName;
