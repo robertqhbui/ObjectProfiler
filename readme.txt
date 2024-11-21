@@ -8,7 +8,9 @@ The caller must delete the object if the caller used new.
 
 Build
 ======
-You can build open the Visual Studio solution or project using Visual Studio 2022 or later, with C++14.
+You can build open the Visual Studio solution or project using Visual Studio 2022 or later, with C++14. 
+Only the Release for x64 build configuration is setup. I have not tested with other configurations yet.
+Therefore, ensure your build configuration is set to Release for x64 before attempting to build.
 
 The project include a "cut-down" version of boost.
 
@@ -17,3 +19,7 @@ to have your constructor(s)/destructor(s) plus overloading of the << operator fo
 data.
 
 This is an example code therefore I have no included unit tests.
+
+Misclaimer
+==========
+The naming for the main project is a light misnomer. I may change the project name later.
